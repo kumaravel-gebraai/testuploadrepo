@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/* ── Scroll-triggered animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ── Hover & interactive ── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px hsl(var(--color-primary) / 0.15); }
+  50% { box-shadow: 0 0 24px hsl(var(--color-primary) / 0.3); }
+}
+
+/* ── Continuous motion ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Utility classes for scroll animations ── */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out both;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ── Hover helpers ── */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Semantic background utilities ── */
+/* bg-surface: surface background + automatic text contrast override */
+@utility bg-surface {
+  background-color: hsl(var(--bg-surface));
+  --text-heading: var(--text-on-surface);
+  --text-main: var(--text-on-surface);
+  --text-muted: var(--text-on-surface-muted);
+}
+/* bg-canvas: page-level background (no text override needed — canvas text is the default) */
+@utility bg-canvas {
+  background-color: hsl(var(--bg-canvas));
+}
+
+/* === THEME TOKENS (auto-generated) === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --chart-1: 259 63% 59%;
+    --chart-2: 289 73% 59%;
+    --chart-3: 229 53% 69%;
+    --chart-4: 19 63% 64%;
+    --chart-5: 79 63% 54%;
+    --bg-canvas: 262 83% 58%;
+    --bg-subtle: 220 14% 96%;
+    --font-body: Inter;
+    --text-main: 244 49% 93%;
+    --bg-surface: 0 0% 100%;
+    --hover-lift: 0px;
+    --radius-btn: 9999px;
+    --text-muted: 216 10% 90%;
+    --icon-weight: 2;
+    --radius-card: 12px;
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.1);
+    --border-width: 1px;
+    --font-heading: Inter;
+    --backdrop-blur: 12px;
+    --border-subtle: 220 13% 91%;
+    --color-primary: 259 63% 59%;
+    --font-body-size: 16px;
+    --transition-dur: 0.2s;
+    --btn-secondary-bg: 0 0% 100%;
+    --btn-secondary-fg: 0 0% 100%;
+    --color-primary-fg: 0 0% 100%;
+    --font-body-height: 1.5;
+    --inverse-bg-canvas: 263 69% 42%;
+    --inverse-bg-subtle: 0 0% 15%;
+    --inverse-text-main: 0 0% 100%;
+    --inverse-bg-surface: 0 0% 10%;
+    --inverse-text-muted: 252 95% 85%;
+    --font-heading-weight: 700;
+    --btn-secondary-border: 0 0% 100%;
+    --inverse-border-subtle: 0 0% 25%;
+    --color-accent: 259 63% 59%;
+    --color-primary-text: 259 63% 59%;
+    /* --- TAILWIND / SHADCN COMPATIBILITY --- */
+    --background: var(--bg-canvas);
+    --foreground: var(--text-main);
+
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+
+    --popover: var(--bg-surface);
+    --popover-foreground: var(--text-main);
+
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-fg);
+
+    --secondary: var(--bg-subtle, #f3f4f6);
+    --secondary-foreground: var(--text-main);
+
+    --muted: var(--bg-subtle, #f3f4f6);
+    --muted-foreground: var(--text-muted);
+
+    --accent: var(--color-accent, var(--color-primary));
+    --accent-foreground: var(--color-accent-fg, var(--color-primary-fg));
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--border-subtle);
+    --input: var(--border-subtle);
+    --ring: var(--color-primary);
+
+    --ring-offset-width: 2px;
+    --ring-offset-color: var(--bg-canvas);
+
+    --radius: var(--radius-btn);
+
+    --color-primary-foreground: var(--color-primary-fg);
+    --color-accent-foreground: var(--color-accent-fg, var(--text-main));
+
+    --text-on-surface: var(--text-main);
+    --text-on-surface-muted: var(--text-muted);
+}
+
+.theme-inverse {
+    --bg-canvas: 263 69% 42%;
+    --bg-subtle: 0 0% 15%;
+    --text-main: 0 0% 100%;
+    --bg-surface: 0 0% 10%;
+    --text-muted: 252 95% 85%;
+    --border-subtle: 0 0% 25%;
+    --text-on-surface: var(--text-main);
+    --text-on-surface-muted: var(--text-muted);
+    --color-primary-text: 259 63% 59%;
+
+    --background: var(--bg-canvas);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --muted: 215 20% 20%;
+    --secondary: 215 20% 20%;
+    --muted-foreground: var(--text-muted);
+    --border: var(--border-subtle);
+}
+
+.theme-alt {
+    --bg-canvas: 220 14% 96%;
+
+    --background: var(--bg-canvas);
+}
+
+.theme-inverse-alt {
+    --bg-canvas: 0 0% 15%;
+    --text-main: 0 0% 100%;
+    --text-heading: 0 0% 100%;
+    --text-muted: 252 95% 85%;
+    --border-subtle: 0 0% 25%;
+    --color-primary-text: 259 63% 59%;
+
+    --background: var(--bg-canvas);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --border: var(--border-subtle);
+}
+
+.theme-brand {
+    --bg-canvas: 259 63% 59%;
+    --bg-surface: 0 0% 100% / 0.1;
+    --text-main: 0 0% 100%;
+    --text-heading: 0 0% 100%;
+    --text-muted: 0 0% 100% / 0.8;
+    --border-subtle: 0 0% 100% / 0.2;
+    --color-primary: 0 0% 100%;
+    --color-primary-text: 0 0% 100%;
+    --color-primary-fg: 259 63% 59%;
+    --color-accent: 0 0% 100%;
+    --color-accent-fg: 259 63% 59%;
+    --link-color: 0 0% 100%;
+
+    --background: var(--bg-canvas);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --muted: 0 0% 100% / 0.1;
+    --secondary: 0 0% 100% / 0.1;
+    --muted-foreground: var(--text-muted);
+    --border: var(--border-subtle);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-fg);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-fg);
+    --ring: 0 0% 100%;
+}
+
+.theme-brand-gradient {
+    --bg-canvas: 259 63% 59%;
+    --bg-surface: 0 0% 100% / 0.1;
+    --text-main: 0 0% 100%;
+    --text-heading: 0 0% 100%;
+    --text-muted: 0 0% 100% / 0.8;
+    --border-subtle: 0 0% 100% / 0.2;
+    --color-primary: 0 0% 100%;
+    --color-primary-text: 0 0% 100%;
+    --color-primary-fg: 259 63% 59%;
+    --color-accent: 0 0% 100%;
+    --color-accent-fg: 259 63% 59%;
+    --link-color: 0 0% 100%;
+
+    --background: var(--bg-canvas);
+    --foreground: var(--text-main);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-main);
+    --muted: 0 0% 100% / 0.1;
+    --secondary: 0 0% 100% / 0.1;
+    --muted-foreground: var(--text-muted);
+    --border: var(--border-subtle);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-fg);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-fg);
+    --ring: 0 0% 100%;
+    background: linear-gradient(to bottom right, hsl(259 63% 59%), hsl(289 63% 49%));
+}
+/* === END THEME TOKENS === */
+
+
+
+
+
+

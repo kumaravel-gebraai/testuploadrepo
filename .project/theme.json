@@ -1,0 +1,97 @@
+{
+  "theme": {
+    "--chart-1": "#7f56d9",
+    "--chart-2": "#c74ae3",
+    "--chart-3": "#8695da",
+    "--chart-4": "#dd8e69",
+    "--chart-5": "#a5d440",
+    "--bg-canvas": "#7c3aed",
+    "--bg-subtle": "#f3f4f6",
+    "--font-body": "Inter",
+    "--text-main": "#e6e5f6",
+    "--bg-surface": "#ffffff",
+    "--hover-lift": "0px",
+    "--radius-btn": "9999px",
+    "--text-muted": "#e3e5e8",
+    "--icon-weight": "2",
+    "--radius-card": "12px",
+    "--shadow-card": "0 1px 3px rgba(0,0,0,0.1)",
+    "--border-width": "1px",
+    "--font-heading": "Inter",
+    "--backdrop-blur": "12px",
+    "--border-subtle": "#e5e7eb",
+    "--color-primary": "#7f56d9",
+    "--font-body-size": "16px",
+    "--transition-dur": "0.2s",
+    "--btn-secondary-bg": "transparent",
+    "--btn-secondary-fg": "#ffffff",
+    "--color-primary-fg": "#ffffff",
+    "--font-body-height": "1.5",
+    "--inverse-bg-canvas": "#5b21b6",
+    "--inverse-bg-subtle": "#262626",
+    "--inverse-text-main": "#ffffff",
+    "--inverse-bg-surface": "#1a1a1a",
+    "--inverse-text-muted": "#c4b5fd",
+    "--font-heading-weight": "700",
+    "--btn-secondary-border": "#ffffff",
+    "--inverse-border-subtle": "#404040"
+  },
+  "assets": {
+    "logo": {
+      "alt": "Everloop Logo",
+      "dark": "https://geteverloop.com/static/logo.png",
+      "light": "https://geteverloop.com/static/logo.svg"
+    },
+    "favicon": "https://geteverloop.com/assets/icon-L8LPri0T.png",
+    "socials": {
+      "github": null,
+      "twitter": "https://x.com/everloop_ai",
+      "linkedin": "https://www.linkedin.com/company/geteverloop/",
+      "instagram": null
+    },
+    "hero_background_image": null
+  },
+  "strategy": {
+    "style": {
+      "sliders": {
+        "casual": 40,
+        "technical": 35,
+        "enthusiastic": 75
+      },
+      "archetype": "Bold",
+      "formatting": {
+        "emoji": false,
+        "casing": "sentence_case"
+      },
+      "vocabulary": {
+        "banned": [
+          "complicated",
+          "manual",
+          "slow"
+        ],
+        "preferred": [
+          "growth",
+          "automate",
+          "AI-native",
+          "acquisition",
+          "funnel",
+          "conversion",
+          "retention",
+          "always on"
+        ]
+      }
+    },
+    "voice": {
+      "tone": "Confident, Direct, Energetic",
+      "persona": "The Bold Innovator"
+    },
+    "industry": "AI Marketing & Growth Automation SaaS",
+    "value_prop": "Automate growth across the funnel, from discovery and ads to conversion and retention.",
+    "pricing_model": "free"
+  },
+  "layoutSettings": {},
+  "motionSettings": {},
+  "pageExtensions": {},
+  "comparisonTokens": {},
+  "landingTokens": {}
+}
