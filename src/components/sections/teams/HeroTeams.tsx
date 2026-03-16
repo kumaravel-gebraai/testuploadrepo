@@ -13,7 +13,7 @@ export default function HeroTeams() {
               Team Collaboration
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-[hsl(var(--text-heading))] mb-6">
-              Build Powerful Teams with AI Marketing test
+              Build Powerful Teams with AI Marketing test test
             </h1>
             <p className="text-lg md:text-xl text-[hsl(var(--text-muted))] leading-relaxed mb-10 max-w-3xl mx-auto">
               Empower your marketing team to collaborate seamlessly, move faster, and achieve more with unified AI-powered automation. Scale campaigns, share insights, and drive growth together.
